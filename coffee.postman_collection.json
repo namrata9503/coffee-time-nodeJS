@@ -1,0 +1,95 @@
+{
+    "info": {
+        "_postman_id": "7965d170-c0a4-4521-9c84-88d6b1453b2c",
+        "name": "coffee",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [{
+            "name": "get user details- by name",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "localhost:8080/api/userdetails?user=coach",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "payments"
+                    ],
+                    "query": [{
+                        "key": "user",
+                        "value": "coach"
+                    }]
+                },
+                "description": "user name - payments"
+            },
+            "response": []
+        },
+        {
+            "name": "get users",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "localhost:8080/api/payments?user=coach",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "payments"
+                    ],
+                    "query": [{
+                        "key": "user",
+                        "value": "coach"
+                    }]
+                },
+                "description": "user name - payments"
+            },
+            "response": []
+        },
+        {
+            "name": "all prices",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "localhost:8080/api/prices",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "prices"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "get all orders",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/orders",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "orders"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
