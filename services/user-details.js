@@ -9,9 +9,10 @@ var underscore = '_';
 
 exports.getUserDetails = function(user) {
     var totalPayedAmount = 0;
+    var usersPayment = 0;
 
     // get users payment
-    const usersPayment = paymentData.filter((element) => element.user === user);
+    usersPayment = paymentData.filter((element) => element.user === user);
     usersPayment.forEach((element) => {
         totalPayedAmount += element.amount;
     });
@@ -27,7 +28,7 @@ exports.getUserDetails = function(user) {
 
     // debt
     var owed = costOfAllOrders - totalPayedAmount;
-    var creditScore = owed > 0 ? 10 : (owed / costOfAllOrders * -100).toFixed(2)
+    var creditScore = owed < 0 ? 5 : Math.floor(5 - (owed / costOfAllOrders * 5));
 
     var details = { 'user': user, 'totalPayedAmount': totalPayedAmount, 'costOfAllOrders': costOfAllOrders, 'owed': owed, 'creditSafeScore': creditScore, 'orders': userOrders };
 
